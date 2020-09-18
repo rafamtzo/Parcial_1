@@ -31,6 +31,18 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 
 // CREA TU FUNCION challenge1 aqui 
 
+function challenge1(){
+    var num = prompt("Cuantos botones necesitas?");
+
+    var target = document.getElementById("dummy");
+
+    for (i = 0; i < num; i++) {
+        var nuevoDiv = document.createElement("button");
+        nuevoDiv.textContent = nombres[i];
+        target.appendChild(nuevoDiv);
+    }
+}
+
 
 
 // ************** PARTE 2    **************
@@ -42,6 +54,11 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 
 // CREA TU FUNCION challenge2 2 aquí.
 
+function challenge2(){
+    for (i = 0; i < nombres.length; i++) {
+        console.log(nombres[i].toUpperCase())
+    }
+}
 
 
 // ************** PARTE 3    **************
@@ -54,9 +71,19 @@ A) Escribe un constructor que te permita generar objetos de tipo "Dog" que recib
 2) Color
 3) Raza
 
+function Dog(Nombre, Color, Raza){
+    this.Nombre = Nombre;
+    this.Color = Color;
+    this.Raza = Raza;
+}
 
 B) Utilizando el constructor crea 3 objectos con diferentes valores y escribe en consola cada objeto.
 
+var tosca = new Dog("Tosca", "Cafe", "Chihuahua");
+
+var coco = new Dog("Coco", "Blanco", "Pomerania");
+
+var freya = new Dog("Freya", "Negro", "Labrador");
 
 *****BONUS**** 10  puntos
 
@@ -66,11 +93,14 @@ Deberia escribir en consola la concatenación de nombre + color + raza para el o
 
 Invoca la función para validar su funcionalidad.
 
+function printInfo(){
+    console.log("Nombre: " + tosca["Nombre"] + ", de color: " + tosca["Color"] + "y de raza: " + tosca[Raza]);
+    console.log("Nombre: " + coco["Nombre"] + ", de color: " + coco["Color"] + "y de raza: " + coco[Raza]);
+    console.log("Nombre: " + freya["Nombre"] + ", de color: " + freya["Color"] + "y de raza: " + freya[Raza]);
+}
+
+
 */
-
-
-
-
 
 </script>
 
